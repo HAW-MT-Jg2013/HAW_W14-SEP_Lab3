@@ -7,12 +7,12 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 ##### Phase 1 - Reverse Engineering (bestehendes System)
 - [x] Klassendiagramm erstellen
 - [x] state machine Diagramm erstellen
-- [ ] Requirements wiederherstellen
-- [ ] Tests für die Requirements formulieren
+- [x] Requirements wiederherstellen
+- [x] Tests für die Requirements formulieren
 
 ##### Phase 2 - die neue Komponente
-- [ ] Requirements um die neue Komponente erweitern
-- [ ] Tests um die neue Komponente erweitern
+- [x] Requirements um die neue Komponente erweitern
+- [x] Tests um die neue Komponente erweitern
 - [x] Klassendiagramm um die neue Komponente erweitern
 - [x] state machine um die neue Komponente erweitern
 
@@ -32,15 +32,18 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 #### Dokumentation Termin 1
 - [x] Klassendiagramm
 - [x] state machine
-- [ ] Anmerkungen zu den Diagrammen (Was sagen diese aus?)
+- [x] Anmerkungen zu den Diagrammen (Was sagen diese aus?)
+- [x] Analyse
+- [x] Requirements
+- [x] Tests
+- [x] Design
+- [ ] in EMIL hochladen
+
+#### Dokumentation Termin 2
 - [ ] Analyse
-- [ ] Requirements
-- [ ] Tests
-- [ ] Design
 - [ ] Integrationstests
 - [ ] Fazit
 - [ ] in EMIL hochladen
-
 
 ## Anmerkungen zu Github:
 es gibt das zentrale Repository in dem der aktuelle Stand liegen soll. Wenn ihr etwas bearbeitet, läuft es folgendermaßen:
