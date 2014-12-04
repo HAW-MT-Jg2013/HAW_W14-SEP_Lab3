@@ -18,19 +18,19 @@
 #include "FestoProcessSensors.h"
 
 enum heights {Low, Middle, High, Incorrect};
-enum fsm_states {Standby, ItemDetected, ItemWrong, WrongType1, WrongType2};
+enum height_fsm_states {H_Standby, ItemDetected, ItemWrong, WrongType1, WrongType2};
 
 
-int lowVal   = 3780;
-int midVal   = 3380;
-int highVal  = 3082;
-int tolSmall = 10;
-int tolWide  = 60;
+const int lowVal   = 3780;
+const int midVal   = 3380;
+const int highVal  = 3082;
+const int tolSmall = 10;
+const int tolWide  = 60;
 
 
-class HeightProfileCheck {
+class HeightProfileCheck : public Plugin{
 private:
-    fsm_states currentState;
+    height_fsm_states currentState;
     FestoProcessSensors *process;
     bool itemDiagnosis;
     std::ofstream logFile;
@@ -47,4 +47,4 @@ private:
     void logDefectType(std::string defectDecsription);
 };
 
-#endif
+#endif /* HEIGHT_PROFILE_CHECK_H */

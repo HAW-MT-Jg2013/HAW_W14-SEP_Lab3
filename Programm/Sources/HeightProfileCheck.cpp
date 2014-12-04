@@ -13,7 +13,7 @@
 
 HeightProfileCheck::HeightProfileCheck(FestoProcessSensors *process) {
     this->process = process;
-    currentState = Standby;
+    currentState = H_Standby;
     
     logFile.open("hightCheckLog.txt");
 }
@@ -45,14 +45,14 @@ void HeightProfileCheck::evalEvents() {
     
     
     switch (currentState) {
-        case Standby:
+        case H_Standby:
             if (heightLevel == High) {
                 currentState = ItemDetected;
             }
             break;
         case ItemDetected:
             if (heightLevel == Low) {
-                currentState = Standby;
+                currentState = H_Standby;
             }else if (heightLevel == Middle) {
                 currentState = ItemWrong;
             }
@@ -65,10 +65,10 @@ void HeightProfileCheck::evalEvents() {
             }
             break;
         case WrongType1:
-            currentState = Standby;
+            currentState = H_Standby;
             break;
         case WrongType2:
-            currentState = Standby;
+            currentState = H_Standby;
             break;
         
         default:
@@ -78,7 +78,7 @@ void HeightProfileCheck::evalEvents() {
 
 void HeightProfileCheck::evalState() {
     switch (currentState) {
-        case Standby:
+        case H_Standby:
             itemDiagnosis = 0;
             break;
         case WrongType1:
