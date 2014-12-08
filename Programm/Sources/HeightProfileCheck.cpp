@@ -3,9 +3,9 @@
  *
  * class for checking the height profile of the items
  *
- * \author  Jannik Beyerstedt
- * \version 0.1
- * \date    2014-11-25
+ * \author  Jannik Beyerstedt, Daniel Friedrich
+ * \version 0.2
+ * \date    2014-12-08
  */
 
 #include "HeightProfileCheck.h"
@@ -100,9 +100,9 @@ bool HeightProfileCheck::result() {
     return itemDiagnosis;
 }
 
-void HeightProfileCheck::logDefectType(std::string defectDecsription) {
+void HeightProfileCheck::logDefectType(std::string defectDescription) {
     if (logFile.is_open()) {
-        logFile << time(NULL) << " wrong item: " <<  defectDecsription << std::endl;
+        logFile << time(NULL) << " wrong item: " <<  defectDescription << std::endl;
     }else {
         std::cout << "logfile can´t be accessed" << std::endl;
     }

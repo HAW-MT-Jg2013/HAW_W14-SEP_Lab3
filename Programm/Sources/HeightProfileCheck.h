@@ -3,9 +3,9 @@
  *
  * class for checking the height profile of the items
  *
- * \author  Jannik Beyerstedt
- * \version 0.1
- * \date    2014-11-25
+ * \author  Jannik Beyerstedt, Daniel Friedrich
+ * \version 0.2
+ * \date    2014-12-08
  */
 
 #ifndef HEIGHT_PROFILE_CHECK_H
@@ -44,7 +44,7 @@ public:
     void evalCycle();
     bool result();
 private:
-    void logDefectType(std::string defectDecsription);
+    void logDefectType(std::string defectDescription);
 };
 
 #endif /* HEIGHT_PROFILE_CHECK_H */

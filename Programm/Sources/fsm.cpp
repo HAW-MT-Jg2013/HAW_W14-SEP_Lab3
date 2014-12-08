@@ -59,6 +59,9 @@ void FSM::evalEvents() {
             if (process->isItemAtEnd()) {
                 currentState = Error;
             }
+            if (!(process->hasItemCorrectHight())) {
+                currentState = TransportBack;
+            }
             break;
         case MetalDetection:
             if (process->isMetalDetected()) {
@@ -107,6 +110,16 @@ void FSM::evalEvents() {
             break;
         case Error:
             if (process->isButtonStartNegativeEdge()) {
+                currentState = Standby;
+            }
+            break;
+        case TransportBack:
+            if (process->isItemAtBeginning()) {
+                currentState = StartReached;
+            }
+            break;
+        case StartReached:
+            if (!(process->isItemAtBeginning())) {
                 currentState = Standby;
             }
             break;
@@ -186,7 +199,15 @@ void FSM::evalState() {
             process->closeJunction();
             blinkRed();
             break;
-
+        case TransportBack:
+            process->driveLeft();
+            blinkRed();
+            process->lightGreenOff();
+            break;
+        case StartReached:
+            process->driveStop();
+            blinkRed();
+            break;
     }
 }
 
