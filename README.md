@@ -17,10 +17,8 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 - [x] state machine um die neue Komponente erweitern
 
 ##### Phase 3 - Implementierung
-- [ ] state machine: Erweiterung programmieren
-- [ ] Tests für die erweiterte state machine programmieren
-- [ ] automatisiert testen
-- [ ] neue Komponente programmieren
+- [x] state machine: Erweiterung programmieren
+- [x] neue Komponente programmieren
 - [ ] Tests für die neue Komponente programmieren
 - [ ] automatisiert testen
 
@@ -37,7 +35,7 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 - [x] Requirements
 - [x] Tests
 - [x] Design
-- [ ] in EMIL hochladen
+- [x] in EMIL hochladen
 
 #### Dokumentation Termin 2
 - [ ] Analyse
@@ -48,10 +46,11 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 ## Anmerkungen zu Github:
 es gibt das zentrale Repository in dem der aktuelle Stand liegen soll. Wenn ihr etwas bearbeitet, läuft es folgendermaßen:
 
-- zentrales Repository forken
-- an eigenem Repository arbeiten (commits machen)
-- pull-request senden (auf der Github-Website)
-- Jannik bestätigt diesen dann
-- das zentrale Repository ist dann mit deinen Änderungen aktuell
-
-Wenn du deine Änderungen abgegeben hast und wenn andere auch etwas verändert haben, musst du dein Repository löschen und das zentrale Repository neu forken, damit du auf den aktuellen Stand kommst.
+- alle arbeiten am zentralen Repository
+- zentrales Repository lokal herunterladen
+- branch aus "development" anlegen
+- an dieser (eigenen) branch arbeiten
+- zum testen un zusammenfüren Pull-Request bei github von deiner branch auf "development" stellen.
+- evtl. die Änderungen diskutieren
+- Pull-Request bestätigen, merge
+- wenn Tests erfolgreich, dann Pull-Request zum "master"
