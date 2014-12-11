@@ -32,7 +32,7 @@ class HeightProfileCheck : public Plugin{
 private:
     height_fsm_states currentState;
     FestoProcessSensors *process;
-    bool itemDiagnosis;
+    bool itemDiagnosis;             // true if defect detected
     std::ofstream logFile;
 public:
     HeightProfileCheck( FestoProcessSensors *process);
@@ -42,7 +42,7 @@ private:
     void evalState();
 public:
     void evalCycle();
-    bool result();
+    bool result();                  // returns true if defect detected
 private:
     void logDefectType(std::string defectDescription);
 };
