@@ -24,7 +24,7 @@ public:
 public:
     bool isItemAtBeginning(void) {return 0;};
     bool isItemAtHightSensor(void) {return 0;};
-    //bool hasItemCorrectHight(void){return 0;};
+    bool hasItemCorrectHight(void){return 0;};
     bool isItemAtMetalDetector(void) {return 0;};
     bool isMetalDetected(void) {return 0;};
     bool isJunctionOpen(void) {return 0;};
