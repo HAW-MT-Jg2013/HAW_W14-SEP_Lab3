@@ -32,6 +32,10 @@ FestoProcessAccess::~FestoProcessAccess() {
     }
 }
 
+void FestoProcessAccess::addPlugin(Plugin *heightPlugin) {
+    plugin = heightPlugin;
+}
+
 void FestoProcessAccess::updateInputs(void) {
     timeCounter = time(NULL);
     process->updateProcessImage();
@@ -148,6 +152,10 @@ bool FestoProcessAccess::isItemAtBeginning(void) {
 bool FestoProcessAccess::isItemAtHightSensor(void) {
     return !(process->isBitSet(ITEM_AT_HIGHT_SENSOR)); // active low
 };
+
+bool FestoProcessAccess::hasItemCorrectHight(void) {
+    return !(plugin->result()); // true is item with defect
+}
 
 bool FestoProcessAccess::isItemAtMetalDetector(void) {
     return !(process->isBitSet(ITEM_AT_JUNCTION)); // active low
