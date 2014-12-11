@@ -3,25 +3,37 @@
  *
  * class for checking the height profile of the items
  *
- * \author  Jannik Beyerstedt
- * \version 0.1
- * \date    2014-11-25
+ * \author  Jannik Beyerstedt, Daniel Friedrich
+ * \version 0.2
+ * \date    2014-12-08
  */
 
 #ifndef HEIGHT_PROFILE_CHECK_H
 #define HEIGHT_PROFILE_CHECK_H
 
+#include <iostream>
+#include <fstream>
+
 #include "plugin.h"
 #include "FestoProcessSensors.h"
 
-enum heights {Low, Middle, High};
-enum fsm_states {Standby, ItemDetected, ItemWrong, WrongType1, WrongType2};
+enum heights {Low, Middle, High, Incorrect};
+enum height_fsm_states {H_Standby, ItemDetected, ItemWrong, WrongType1, WrongType2};
 
-class HeightProfileCheck {
+
+const int lowVal   = 3780;
+const int midVal   = 3380;
+const int highVal  = 3082;
+const int tolSmall = 10;
+const int tolWide  = 60;
+
+
+class HeightProfileCheck : public Plugin{
 private:
-    fsm_states currentState;
+    height_fsm_states currentState;
     FestoProcessSensors *process;
     bool itemDiagnosis;
+    std::ofstream logFile;
 public:
     HeightProfileCheck( FestoProcessSensors *process);
     ~HeightProfileCheck();
@@ -32,7 +44,7 @@ public:
     void evalCycle();
     bool result();
 private:
-    void logDefectType( );
+    void logDefectType(std::string defectDescription);
 };
 
-#endif
+#endif /* HEIGHT_PROFILE_CHECK_H */
