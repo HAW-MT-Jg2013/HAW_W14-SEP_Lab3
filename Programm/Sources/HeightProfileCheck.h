@@ -40,6 +40,7 @@ public:
 private:
     void evalEvents();
     void evalState();
+
 public:
     void evalCycle();
     bool result();                  // returns true if defect detected

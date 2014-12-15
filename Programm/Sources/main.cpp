@@ -8,7 +8,12 @@
 #include <cstdlib>
 #include <cstdio>
 
+#define TEST                // enable tests
+
 #include "factory.h"
+#ifdef TEST
+#include "UnitTester.h"
+#endif
 
 using namespace std;
 
@@ -16,6 +21,12 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+    
+#ifdef TEST
+    UnitTester *t = new UnitTester();
+    delete t;
+#endif
+    
     bool run = true; // set this variable to false whilst debugging to end program.
     FSMFactory factory;
 
