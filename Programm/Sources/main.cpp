@@ -23,7 +23,8 @@ using namespace std;
 int main(int argc, char** argv) {
     
 #ifdef TEST
-    volatile UnitTester t;
+    UnitTester *t = new UnitTester();
+    delete t;
 #endif
     
     bool run = true; // set this variable to false whilst debugging to end program.

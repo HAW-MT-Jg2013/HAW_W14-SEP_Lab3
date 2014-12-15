@@ -25,6 +25,7 @@ UnitTester::UnitTester() {
 
 UnitTester::~UnitTester() {
     delete unitUnderTest;
+    delete sensorStub;
 }
 
 void UnitTester::doTest() {

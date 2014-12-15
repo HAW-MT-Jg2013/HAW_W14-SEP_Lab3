@@ -20,7 +20,6 @@
 
 class UnitTester {
     HeightProfileCheck* unitUnderTest;
-    //FestoProcessSensors* sensorStub;
     StubHeightSensor* sensorStub;
     
 public:
