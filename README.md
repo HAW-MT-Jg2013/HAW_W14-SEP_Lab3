@@ -38,8 +38,8 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 - [x] in EMIL hochladen
 
 #### Dokumentation Termin 2
-- [ ] Analyse
-- [ ] Integrationstests
+- [x] Analyse
+- [x] Integrationstests
 - [ ] Fazit
 - [ ] in EMIL hochladen
 
