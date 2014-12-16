@@ -10,3 +10,12 @@
  */
 
 #include "StubHeightSensor.h"
+
+
+unsigned short StubHeightSensor::getHight() {
+    return height;
+}
+
+void StubHeightSensor::setHightValue(unsigned short height){
+    this->height = height;
+}
