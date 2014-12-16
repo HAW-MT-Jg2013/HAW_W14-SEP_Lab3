@@ -70,7 +70,6 @@ void HeightProfileCheck::evalEvents() {
         case WrongType2:
             currentState = H_Standby;
             break;
-        
         default:
             break;
     }
@@ -102,7 +101,8 @@ bool HeightProfileCheck::result() {
 
 void HeightProfileCheck::logDefectType(std::string defectDescription) {
     if (logFile.is_open()) {
-        logFile << time(NULL) << " wrong item: " <<  defectDescription << std::endl;
+        logFile   << time(NULL) << " wrong item: " <<  defectDescription << std::endl;
+        std::cout << time(NULL) << " wrong item: " <<  defectDescription << std::endl;
     }else {
         std::cout << "logfile can´t be accessed" << std::endl;
     }
