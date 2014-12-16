@@ -19,8 +19,6 @@ using namespace std;
 UnitTester::UnitTester() {
     sensorStub = new StubHeightSensor();
     unitUnderTest = new HeightProfileCheck(sensorStub);
-    
-    doTest();
 }
 
 UnitTester::~UnitTester() {

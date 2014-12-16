@@ -8,7 +8,7 @@
 #include <cstdlib>
 #include <cstdio>
 
-#define TEST                // enable tests
+//#define TEST                // enable tests
 
 #include "factory.h"
 #ifdef TEST
@@ -24,6 +24,7 @@ int main(int argc, char** argv) {
     
 #ifdef TEST
     UnitTester *t = new UnitTester();
+    t->doTest();
     delete t;
 #endif
     

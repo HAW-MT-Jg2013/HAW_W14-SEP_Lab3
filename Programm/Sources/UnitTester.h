@@ -25,7 +25,6 @@ class UnitTester {
 public:
     UnitTester();
     ~UnitTester();
-private:
     void doTest();
 };
 
