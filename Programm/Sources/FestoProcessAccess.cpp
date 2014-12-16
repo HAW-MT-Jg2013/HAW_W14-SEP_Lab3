@@ -16,7 +16,6 @@
 FestoProcessAccess::FestoProcessAccess(FestoProcessImage* processImage) {
     timeCounter = 0;
     process = processImage;
-    plugin = NULL;
     
 #ifdef LOG_PROCESS
     logFile = fopen("c:\\tmp\\processlog.txt","w");
@@ -31,10 +30,6 @@ FestoProcessAccess::~FestoProcessAccess() {
     if(logFile!=NULL){
         fclose(logFile);
     }
-}
-
-void FestoProcessAccess::addPlugin(Plugin *heightPlugin) {
-    plugin = heightPlugin;
 }
 
 void FestoProcessAccess::updateInputs(void) {
@@ -157,10 +152,6 @@ bool FestoProcessAccess::isItemAtBeginning(void) {
 bool FestoProcessAccess::isItemAtHightSensor(void) {
     return !(process->isBitSet(ITEM_AT_HIGHT_SENSOR)); // active low
 };
-
-bool FestoProcessAccess::hasItemCorrectHight(void) {
-    return !(plugin->result()); // true is item with defect
-}
 
 bool FestoProcessAccess::isItemAtMetalDetector(void) {
     return !(process->isBitSet(ITEM_AT_JUNCTION)); // active low

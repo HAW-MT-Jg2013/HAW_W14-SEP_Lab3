@@ -24,13 +24,11 @@ class FestoProcessAccess : public FestoProcessSensors {
 private:
     time_t timeCounter;
     FestoProcessImage* process;
-    Plugin* plugin;
     FILE* logFile;
 
 public:
     FestoProcessAccess(FestoProcessImage* processImage);
     virtual ~FestoProcessAccess();
-    void addPlugin(Plugin* heightPlugin);
 public:
     void updateInputs(void);
     void applyOutput(void);
@@ -60,7 +58,6 @@ public:
 
     virtual bool isItemAtBeginning(void);
     virtual bool isItemAtHightSensor(void);
-    virtual bool hasItemCorrectHight(void);
     virtual bool isItemAtMetalDetector(void);
     virtual bool isMetalDetected(void);
     virtual bool isJunctionOpen(void);

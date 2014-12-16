@@ -16,7 +16,7 @@ class FestoProcessSensors {
 public:
     virtual bool isItemAtBeginning(void) = 0;
     virtual bool isItemAtHightSensor(void) = 0;
-    virtual bool hasItemCorrectHight(void)= 0;
+    //virtual bool hasItemCorrectHight(void)= 0;
     virtual bool isItemAtMetalDetector(void) = 0;
     virtual bool isMetalDetected(void) = 0;
     virtual bool isJunctionOpen(void) = 0;

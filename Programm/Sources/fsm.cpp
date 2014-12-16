@@ -59,7 +59,7 @@ void FSM::evalEvents() {
             if (process->isItemAtEnd()) {
                 currentState = Error;
             }
-            if (!(process->hasItemCorrectHight())) {
+            if ( plugin->result() ) {       // result is TRUE if item false detected
                 currentState = TransportBack;
             }
             break;
