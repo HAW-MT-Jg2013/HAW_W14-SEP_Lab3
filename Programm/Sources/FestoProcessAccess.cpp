@@ -16,6 +16,7 @@
 FestoProcessAccess::FestoProcessAccess(FestoProcessImage* processImage) {
     timeCounter = 0;
     process = processImage;
+    plugin = NULL;
     
 #ifdef LOG_PROCESS
     logFile = fopen("c:\\tmp\\processlog.txt","w");
@@ -54,21 +55,25 @@ void FestoProcessAccess::applyOutput(void) {
 
 void FestoProcessAccess::driveRight(void) {
     process->setBitInOutput(DRIVE_DIRECTION_RIGHT);
+    process->clearBitInOutput(DRIVE_DIRECTION_LEFT);
     process->clearBitInOutput(DRIVE_STOP);
 }
 
 void FestoProcessAccess::driveLeft(void) {
     process-> setBitInOutput(DRIVE_DIRECTION_LEFT);
+    process-> clearBitInOutput(DRIVE_DIRECTION_RIGHT);
     process-> clearBitInOutput(DRIVE_STOP);
 }
 
 void FestoProcessAccess::driveSlowRight(void) {
     process->setBitInOutput(DRIVE_DIRECTION_RIGHT | DRIVE_SLOW);
+    process->clearBitInOutput(DRIVE_DIRECTION_LEFT);
     process->clearBitInOutput(DRIVE_STOP);
 }
 
 void FestoProcessAccess::driveSlowLeft(void) {
     process->setBitInOutput(DRIVE_DIRECTION_LEFT | DRIVE_SLOW);
+    process->clearBitInOutput(DRIVE_DIRECTION_RIGHT);
     process->clearBitInOutput(DRIVE_STOP);
 }
 
