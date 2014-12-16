@@ -3,3 +3,6 @@
 *.vpp~*
 
 *.pages
+
+Programm/build
+Programm/dist
