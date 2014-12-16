@@ -19,11 +19,11 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 ##### Phase 3 - Implementierung
 - [x] state machine: Erweiterung programmieren
 - [x] neue Komponente programmieren
-- [ ] Tests für die neue Komponente programmieren
-- [ ] automatisiert testen
+- [x] Tests für die neue Komponente programmieren
+- [x] automatisiert testen
 
 ##### Phase 4 - abschließende Tests
-- [ ] an der realen Maschine testen
+- [x] an der realen Maschine testen
 
 ## Dokumentation
 
