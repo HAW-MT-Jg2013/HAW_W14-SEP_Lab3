@@ -3,6 +3,7 @@ SEP_Lab3_4
 SEP Labor 3 und 4 - LMN - Gr. 2.2
 
 ## Ablaufplan
+**alles fertig - warten auf Rückmeldung**
 
 ##### Phase 1 - Reverse Engineering (bestehendes System)
 - [x] Klassendiagramm erstellen
@@ -40,8 +41,8 @@ SEP Labor 3 und 4 - LMN - Gr. 2.2
 #### Dokumentation Termin 2
 - [x] Analyse
 - [x] Integrationstests
-- [ ] Fazit
-- [ ] in EMIL hochladen
+- [x] Fazit
+- [x] in EMIL hochladen
 
 ## Anmerkungen zu Github:
 es gibt das zentrale Repository in dem der aktuelle Stand liegen soll. Wenn ihr etwas bearbeitet, läuft es folgendermaßen:
